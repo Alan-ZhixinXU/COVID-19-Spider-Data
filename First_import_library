@@ -1,0 +1,16 @@
+import time
+import json
+import requests
+from datetime import datetime
+import pandas as pd
+import numpy as np
+
+from pyecharts import options as opts
+from pyecharts.chart import*
+
+'''
+Since Pandas is one tool which was used to analyse finance data, but it could also be used in any time series data.
+Numpy is used to store and calculate matrix.
+Pyecharts could visualize data, by bar chart, box diagram, dash board, pie chart, and so on. It could also create website directly.
+The installation of Pyecharts: pypi.tuna.tsinghua.edu.cn, mirrors.aliyun.com/pypi.
+'''
