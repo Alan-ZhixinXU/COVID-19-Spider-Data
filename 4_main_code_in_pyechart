@@ -1,6 +1,6 @@
 # Next process is in the main_code
 
-# 定义数据处理函数
+# 定义数据处理函数, 用eval函数是执行字符串的表达式，并返回表达式的值。
 def confirm(x):
     confirm = eval(str(x))['confirm']
     return confirm
@@ -44,6 +44,7 @@ def read_csv():
 
     return countrys_names, confirmed_count
 
+# Include latest update time, total number of China, New confirm of China, areaTree-Children means provinces. 
 # After collect the data, next step is draw the pictuer by pyechart lib.
 
 # Initially, Chineses data
@@ -77,7 +78,9 @@ def draw_map():
             china_list.append(china_dict)
     china_data = pd.DataFrame(china_list)
     china_data.head()
-    
+
+# Set provinces as areaTree-Children, include province name, confirmation number, new number.
+
     # 函数映射
     china_data['confirm'] = china_data['total'].map(confirm)
     china_data['suspect'] = china_data['total'].map(suspect)
@@ -90,7 +93,7 @@ def draw_map():
     china_data = china_data[["province","city","confirm","suspect","dead","heal","addconfirm"]]
     china_data.head()
 
-
+# Add all data of Chinese, from confirmation number, suspect number,
 
     total_pie = Pie(init_opts=opts.InitOpts(theme=ThemeType.WESTEROS,width = '900px',height ='350px'))  #设置主题，和画布大小
     total_pie.add("",[list(z) for z in zip(chinaTotal.keys(), chinaTotal.values())],
