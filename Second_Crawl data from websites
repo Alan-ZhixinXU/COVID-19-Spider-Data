@@ -1,0 +1,10 @@
+'''
+We can download the COVID-19's data from many websites. In this file, I download from the https://news.qq.com/zt2020/page/feiyan.htm#/, but others can also be used.
+'''
+
+#First, enter the developer tools by taping F12.
+name = disease_H5,  is the location of data
+#come back the timestamp
+callback= jQuery341025474297656413425_1592836658705
+
+#we will use the timestamp and this website in the next step.
